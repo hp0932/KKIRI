@@ -28,4 +28,19 @@ $(function(){
           clickable: true
         }
   });
+
+
+  // 주최자 랭킹 
+		$(".ranker-list>li").each(function(i){
+      $(this).on({
+        mouseenter : function(){
+          $(".ranker-list>li").removeClass("on");
+          $(this).addClass("on");
+        },
+        mouseleave : function(){
+          $(".ranker-list>li").removeClass("on");
+        }
+      });
+    });
+
 });

@@ -7,6 +7,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" crossorigin="anonymous"></script>
+    
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
@@ -40,7 +42,7 @@
           	</div>
           </div>
         </div>
-        <div id="contianer" class="contianer">
+        <div id="container">
           <!-- 배너 start -->
           <div id="banner">
             <div class="banner-text-area">
@@ -58,7 +60,7 @@
           <!-- 배너 end -->
 
           <!-- 이런 이벤트는 어떠세요? start -->
-          <div id="event-recommend" class="contianer">
+          <div id="event-recommend">
             <div class="container">
               <div class="row">
                 <div class="col-md-12">
@@ -205,19 +207,179 @@
           <!-- 이런 이벤트는 어떠세요? end -->
 
           <!-- 주최자 랭킹 start -->
-          <div id="ranking" class="container">
+          <div id="ranking">
             <div class="container">
-            	<div class="row">
-            		<div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12">
                   <h3 class="box-title">
-                    평점을 가장 잘 받은 5명의 주최자를 소개합니다.<br>
-                    <span class="box-sub-title">한 주간 가장 높은 점수를 받은 회원들입니다. 축하드려요!</span>
+                    한주간 가장 높은 평점을 받은 5명을 소개합니다.<br>
+                    <span class="box-sub-title">축하드립니다! 앞으로도 멋진 모임들을 많이 만들어주세요.</span>
                   </h3>
-            		</div>
-            	</div>
+                    <div class="ranking-wrap">
+                      <ul class="ranker-list">
+                        <li class="ranker on">
+                          <p class="rank first-rank">1 st</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+                      
+                        <li class="ranker">
+                          <p class="rank second-rank">2 nd</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+                      
+                        <li class="ranker">
+                          <p class="rank third-rank">3 rd</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+                      
+                        <li class="ranker">
+                          <p class="rank least-rank">4 th</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+                     
+                        <li class="ranker">
+                          <p class="rank least-rank">5 th</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+                      </ul>
+                      <!-- <a href="javascript:" class="prev-link btn-link"><img src="img/arrow-prev.png" alt="이전"></a>
+                      <a href="javascript:" class="next-link btn-link"><img src="img/arrow-next.png" alt="다음"></a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- 주최자 랭킹 end -->
+
+          <!-- 카테고리 추천 start -->
+          <div id="category-list">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 class="box-title">
+                    카테고리<br>
+                    <span class="box-sub-title">관심있는 주제별로 이벤트를 찾아보세요.</span>
+                  </h3>
+                  <ul class="category-ul">
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="category-ul">
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="category-ul">
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="category-ul">
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">야외활동</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- 주최자 랭킹 end -->
+          <!-- 카테고리 추천 end -->
+
         </div>
 
         <div id="footer">
