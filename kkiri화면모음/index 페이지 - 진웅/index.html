@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" crossorigin="anonymous"></script>
-    
+
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
@@ -25,7 +25,7 @@
           		<div class="col-md-12">
                 <h1 class="logo"><a href="#"><img src="img/logo.png" alt="로고"></a></h1>
                 <div class="nav-section">
-                  <a href="#">로그인</a>
+                  <a href="#" class="login-btn">로그인</a>
                   <a href="#">회원가입</a>
                   <span class="separation"> | </span>
                   <a href="#">고객센터</a>
@@ -405,7 +405,6 @@
             </div>
           </div>
           <!-- 카테고리 추천 end -->
-
         </div>
 
         <div id="footer">
@@ -428,14 +427,45 @@
           <button type="button" class="top-btn">TOP</button>
         </div>
 
-        <script>
-          function scrollFunction(){
-           if($(window).scrollTop()>=200){
-                 $('#button-top').show(0);
-             }else{
-                 $('#button-top').hide(0);
-             }
+        <!-- 로그인 팝업 start-->
+        <div id="login-popup" class="popup">
+          <p class="popup-title">
+            로그인
+            <img src="img/close-btn.png" alt="닫기버튼" class="close-popup">
+          </p>
+          <div class="popup-content">
+            내용<br>
+            내용<br>
+            내용<br>
+            내용<br>
+          </div>
+          <button class="popup-confirm-btn">확인</button>
+        </div>
+        <div class="popup-shadow"></div>
+        <!-- 로그인 팝업 end-->
+
+      <script>
+        // 로그인 팝업 이벤트
+        $(".login-btn").on({
+          click : function(){
+            $(".popup-shadow, #login-popup").show(0);
           }
+        });
+        $(".close-popup, .popup-shadow").on({
+          click : function(){
+            $(".popup-shadow, #login-popup").hide(0);
+          }
+        });
+
+      </script>
+      <script>
+        function scrollFunction(){
+          if($(window).scrollTop()>=200){
+                $('#button-top').show(0);
+            }else{
+                $('#button-top').hide(0);
+            }
+        }
        $(function(){
          scrollFunction();
          $(window).scroll(function(){
