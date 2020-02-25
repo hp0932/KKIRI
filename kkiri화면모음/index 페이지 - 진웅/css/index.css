@@ -42,7 +42,7 @@
   margin-top: 30px;
 }
 .box-title{
-    margin-bottom: 30px;
+  margin: 30px 0;
 }
 .box-title span{
   font-size: 70%;
@@ -297,5 +297,162 @@
 /* 이런 이벤트 어떠세요? end */
 
 /* 주최자 랭킹 start */
-
+#ranking{
+  margin-top: 50px;
+  width: 100%;
+  height: 600px;
+}
+#ranking .ranking-wrap{
+  position: relative;
+  text-align: center;
+}
+#ranking .ranker-list{
+  width: 100%;
+  position: relative;
+}
+#ranking .ranker{
+  position: relative;
+  width: 17%;
+  display: inline-block;
+  margin: 0 1%;
+  background: #fff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 25px;
+  border-radius: 25px;
+  height: 400px;
+  transition: all .3s;
+  opacity:0.5;
+  cursor: pointer;
+}
+#ranking .ranker.on{
+  opacity:1;
+  transform: translateY(-30px);
+}
+#ranking .ranker>*{
+  position: absolute;
+}
+#ranking .rank{
+  font-size: 4.3rem;
+  z-index: 100;
+  top: 0px;
+  font-weight: bold;
+}
+#ranking .rank.first-rank{
+  color: #ebcc58;
+}
+#ranking .rank.second-rank{
+  color: #dbdbdb;
+}
+#ranking .rank.third-rank{
+  color: #b69177;
+}
+#ranking .rank.least-rank{
+  color: #55595c;
+}
+#ranking .ranker > img{
+  width: 100%;
+  border-radius: 50%;
+  top: 60px;
+  right: 0;
+}
+#ranking .ranker .nickname{
+  font-size: 20px;
+  font-weight: bold;
+  bottom: 58px;
+  transform: translateX(50%);
+  left: -25%;
+}
+#ranking .ranker > .star-rating{
+  font-size: 27px;
+  font-weight: bold;
+  bottom: 0;
+  right: 15px;
+}
+#ranking .btn-link{
+  position: absolute;
+  top: 37%;
+}
+#ranking .btn-link>img{
+  width: 30%;
+}
+#ranking .prev-link{
+  left: -15%;
+}
+#ranking .next-link{
+  right: -15%;
+}
+@media (max-width: 1200px){ 
+  #ranking .rank{
+    font-size: 3.3rem;
+  }
+  #ranking .ranker .nickname{
+    font-size: 16px;
+  }
+  #ranking .ranker{
+    height: 350px;
+  }
+}
+@media (max-width: 992px){ 
+  #ranking .rank{
+    font-size: 2.5rem;
+  }
+  #ranking .ranker .nickname{
+    font-size: 13px;
+  }
+  #ranking .ranker{
+    height: 300px;
+  }
+}
+@media (max-width: 767px){ 
+  #ranking .rank{
+    font-size: 1.7rem;
+  }
+  #ranking .ranker .nickname{
+    font-size: 12px;
+  }
+  #ranking .ranker .nickname{
+    bottom: 70px;
+    left: -36px;
+  }
+}
+@media (max-width: 405px){ 
+  #ranking .rank{
+    font-size: 1rem;
+  }
+  #ranking .ranker .nickname{
+    font-size: 10px;
+  }
+}
 /* 주최자 랭킹 end */
+
+/* 카테고리 추천 start */
+#category-list{
+
+}
+#category-list .category-ul{
+  width: 100%;
+  overflow: hidden;
+}
+#category-list .category-ul li{
+      width: 23%;
+      float: left;
+      margin-left: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 1.8px 1.2px rgba(0, 0, 0, 0.034), 0 1.7px 0.3px rgba(0, 0, 0, 0.048), 0 5.5px 3px rgba(0, 0, 0, 0.06), 0 13.3px 6.9px rgba(0, 0, 0, 0), 0 10.8px 2.4px rgba(0, 0, 0, 0.01), 0 9px 10px rgba(0, 0, 0, 0.12);
+      border-radius: 25px 25px 0 0;
+      transition: all .3s;
+}
+#category-list .category-ul li .blue-background{
+  background: #227fbb;
+}
+#category-list .category-ul li .blue-background img{ 
+  width: 110px;
+}
+#category-list .category-ul li .category-name{
+  height: 50px;
+  display: block;
+  line-height: 50px;
+  padding-left: 10px;
+}
+/* 카테고리 추천 end */
