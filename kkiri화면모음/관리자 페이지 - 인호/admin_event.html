@@ -69,8 +69,8 @@
 
       <div class="row justify-content-md-center">
         <div class="col-12 rounded-sm">
-          <h2 class="mt-2 mb-2">이벤트</h2>
-          <table class="table table-hover table-striped table-sm">
+          <h2 class="mt-3 mb-3">이벤트</h2>
+          <table id="list-table" class="table table-hover table-striped table-sm">
             <thead>
               <tr class="text-center">
                 <th scope="col">이벤트번호</th>
@@ -81,7 +81,6 @@
                 <th scope="col">참석인원</th>
                 <th scope="col">입장티켓</th>
                 <th scope="col">종료여부</th>
-                <th scope="col">상세</th>
               </tr>
             </thead>
             <tbody>
@@ -94,7 +93,6 @@
                 <td>5</td>
                 <td>3장</td>
                 <td>종료</td>
-                <td><button class="btn btn-sm btn-primary">이동</button></td>
               </tr>
               <tr class="text-center">
                 <th scope="row">2</th>
@@ -105,7 +103,6 @@
                 <td>5</td>
                 <td>3장</td>
                 <td>종료</td>
-                <td><button class="btn btn-sm btn-primary">이동</button></td>
               </tr>
               <tr class="text-center">
                 <th scope="row">3</th>
@@ -116,7 +113,6 @@
                 <td>5</td>
                 <td>3장</td>
                 <td>종료</td>
-                <td><button class="btn btn-sm btn-primary">이동</button></td>
               </tr>
             </tbody>
           </table>
@@ -229,6 +225,18 @@
         }
       });
     });
+
+    $(function(){
+			$("#list-table td").click(function(){
+				var noticeNo = $(this).parent().children().eq(0).text();
+				location.href="#";
+			
+			}).mouseenter(function(){
+				$("#list-table td").parent().css("cursor", "pointer");
+			
+			});
+			
+		});
   </script>
 </body>
 
