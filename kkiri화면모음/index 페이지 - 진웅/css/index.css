@@ -1,7 +1,7 @@
 /* 동영상 배너 start*/
 #banner{
   position: relative;
-  max-height: 700px;
+  max-height: 750px;
   overflow: hidden;
   margin-top:3px;
 }
