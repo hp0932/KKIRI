@@ -23,8 +23,39 @@
   transition: all 0.3s;
   font-weight: 500;
 }
-#header .nav-section a:hover{
+#header .nav-section a:hover,
+#header .createEvent-btn{
   color: #00a185;
+}
+.profile-wrap{
+  display: inline;
+  position: relative;
+}
+.profile-icon{
+  width: 60px;
+  border: 1px solid #cdd2d8;
+  border-radius: 50px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.profile-menu{
+  position: absolute;
+  z-index: 100;
+  width: 150px;
+  background: #00a185;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  top: 53px;
+  right: -48px;
+  display:none;
+}
+.profile-menu.on{
+  display: block;
+}
+.profile-menu a,
+#wrapper #header .profile-menu a:hover{
+  color : #ffffff;
 }
 
 /* 로그인 팝업 start */
@@ -33,9 +64,6 @@
 }
 .link{
     color: #0056b3;
-}
-.sign-up-link{
-
 }
 .login-form-wrap{
     margin-top: 30px;
