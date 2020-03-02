@@ -411,9 +411,6 @@
     bottom: 70px;
     left: -36px;
   }
-  #wrapper #category-list{
-    margin-bottom: 270px;
-  }
 }
 @media (max-width: 405px){
   #ranking .rank{
@@ -426,9 +423,6 @@
 /* 주최자 랭킹 end */
 
 /* 카테고리 추천 start */
-#category-list{
-  margin-bottom: 200px;
-}
 #category-list .category-ul{
   width: 100%;
   overflow: hidden;
