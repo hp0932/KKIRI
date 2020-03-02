@@ -12,9 +12,10 @@ a:link,
 a:visited,
 a:hover,
 a:active,
-a:focus							{color:#333333; text-decoration:none;}
+a:focus							{text-decoration:none;}
 input,img						{vertical-align:middle;}
 table							{border-collapse:collapse;}
+input,select,textarea             {border:1px solid #cdd2d8; border-radius: 5px;}
 
 /* 부트스트랩 마진, 패딩 없애기 */
 .col-md-12{
@@ -34,6 +35,7 @@ table							{border-collapse:collapse;}
   height: 100%;
   z-index: 500;
   display: none;
+  cursor: pointer;
 }
 .popup{
   position: fixed;
@@ -78,19 +80,28 @@ table							{border-collapse:collapse;}
   cursor: pointer;
   display: block;
   font-size: 17px;
+  transition: all 0.3s;
 }
-@media screen and (max-width: 1024px) {
+.popup-confirm-btn:hover{
+  opacity: 0.7;
+}
+@media (max-width: 1024px) {
   .popup{
     width : 600px;
   }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .popup{
     width : 500px;
   }
 }
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .popup{
     width : 400px;
   }
+}
+
+/* 체크박스 */
+#wrapper .custom-control-input{
+  position: relative;
 }

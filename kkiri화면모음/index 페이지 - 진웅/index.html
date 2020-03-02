@@ -26,7 +26,7 @@
                 <h1 class="logo"><a href="#"><img src="img/logo.png" alt="로고"></a></h1>
                 <div class="nav-section">
                   <a href="#" class="login-btn">로그인</a>
-                  <a href="#">회원가입</a>
+                  <a href="signUp.html">회원가입</a>
                   <span class="separation"> | </span>
                   <a href="#">고객센터</a>
                   <!-- <div class="nav-item dropdown">
@@ -42,6 +42,45 @@
           	</div>
           </div>
         </div>
+        <!-- 로그인 팝업 start-->
+        <div id="login-popup" class="popup">
+          <p class="popup-title">
+            로그인
+            <img src="img/close-btn.png" alt="닫기버튼" class="close-popup">
+          </p>
+          <div class="popup-content">
+            <p class="sign-up-title">아직 회원이 아니신가요?&nbsp;<a href="signUp.html" class="link sign-up-link">회원가입</a></p>
+            <form class="login-form-wrap custom-checkbox" action="#" method="post">
+              <input type="text" name="memberId" placeholder="아이디를 입력해주세요." autocomplete="off">
+              <input type="password" name="memberPwd" placeholder="비밀번호를 입력해주세요.">
+
+              <input type="checkbox" class="custom-control-input" name="rememberId" id="rememberId">
+              <label class="custom-control-label" for="rememberId">아이디 저장</label>
+              <a href="#" class="link find-info-link">아이디 혹은 비밀번호를 잊으셨나요?</a>
+
+              <button class="popup-confirm-btn login-conform-btn">로그인</button>
+              <button class="popup-confirm-btn another-btn">구글 아이디로 로그인</button>
+              <button class="popup-confirm-btn another-btn">페이스북 아이디로 로그인</button>
+            </form>
+          </div>
+        </div>
+        <div class="popup-shadow"></div>
+        <!-- 로그인 팝업 end-->
+
+      <script>
+        // 로그인 팝업 이벤트
+        $(".login-btn").on({
+          click : function(){
+            $(".popup-shadow, #login-popup").show(0);
+          }
+        });
+        $(".close-popup, .popup-shadow").on({
+          click : function(){
+            $(".popup-shadow, #login-popup").hide(0);
+          }
+        });
+
+      </script>
         <div id="container">
           <!-- 배너 start -->
           <div id="banner">
@@ -423,41 +462,13 @@
           	</div>
           </div>
         </div>
+        </div>
+
         <div id="button-top">
           <button type="button" class="top-btn">TOP</button>
         </div>
 
-        <!-- 로그인 팝업 start-->
-        <div id="login-popup" class="popup">
-          <p class="popup-title">
-            로그인
-            <img src="img/close-btn.png" alt="닫기버튼" class="close-popup">
-          </p>
-          <div class="popup-content">
-            내용<br>
-            내용<br>
-            내용<br>
-            내용<br>
-          </div>
-          <button class="popup-confirm-btn">확인</button>
-        </div>
-        <div class="popup-shadow"></div>
-        <!-- 로그인 팝업 end-->
 
-      <script>
-        // 로그인 팝업 이벤트
-        $(".login-btn").on({
-          click : function(){
-            $(".popup-shadow, #login-popup").show(0);
-          }
-        });
-        $(".close-popup, .popup-shadow").on({
-          click : function(){
-            $(".popup-shadow, #login-popup").hide(0);
-          }
-        });
-
-      </script>
       <script>
         function scrollFunction(){
           if($(window).scrollTop()>=200){

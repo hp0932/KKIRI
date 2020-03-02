@@ -378,7 +378,7 @@
 #ranking .next-link{
   right: -15%;
 }
-@media (max-width: 1200px){ 
+@media (max-width: 1200px){
   #ranking .rank{
     font-size: 3.3rem;
   }
@@ -389,7 +389,7 @@
     height: 350px;
   }
 }
-@media (max-width: 992px){ 
+@media (max-width: 992px){
   #ranking .rank{
     font-size: 2.5rem;
   }
@@ -400,7 +400,7 @@
     height: 300px;
   }
 }
-@media (max-width: 767px){ 
+@media (max-width: 767px){
   #ranking .rank{
     font-size: 1.7rem;
   }
@@ -415,7 +415,7 @@
     margin-bottom: 270px;
   }
 }
-@media (max-width: 405px){ 
+@media (max-width: 405px){
   #ranking .rank{
     font-size: 1rem;
   }
@@ -446,7 +446,7 @@
 #category-list .category-ul li .blue-background{
   background: #227fbb;
 }
-#category-list .category-ul li .blue-background img{ 
+#category-list .category-ul li .blue-background img{
   width: 110px;
 }
 #category-list .category-ul li .category-name{

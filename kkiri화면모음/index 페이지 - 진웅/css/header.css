@@ -26,3 +26,47 @@
 #header .nav-section a:hover{
   color: #00a185;
 }
+
+/* 로그인 팝업 start */
+.sign-up-title{
+    margin-left: 29px;
+}
+.link{
+    color: #0056b3;
+}
+.sign-up-link{
+
+}
+.login-form-wrap{
+    margin-top: 30px;
+}
+.login-form-wrap input[name=memberId],
+.login-form-wrap input[name=memberPwd]{
+  width: 90%;
+  margin: 10px auto;
+  display: block;
+  padding: 10px;
+}
+.login-form-wrap #rememberId{
+  margin-left: 40px;
+}
+.login-form-wrap .find-info-link{
+  float: right;
+  margin-right: 30px;
+}
+.login-form-wrap .popup-confirm-btn{
+  margin-top: 5px;
+  width: 90%;
+}
+
+.popup-content .login-conform-btn{
+  margin-top: 30px;
+}
+@media (max-width: 500px){
+  .login-form-wrap .find-info-link{
+    float: left;
+    margin-left: 29px;
+  }
+
+}
+/* 로그인 팝업 end */
