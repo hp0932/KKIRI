@@ -12,7 +12,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/signUp.css">
+  <link rel="stylesheet" href="css/eventCreate.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <title>KKIRI(끼리)</title>
@@ -82,104 +82,93 @@
       });
     </script>
     <div id="container">
-      <div class="signUp">
+      <div class="eventCreate">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="section-title">회원가입</h2>
+              <h2 class="section-title">이벤트 생성</h2>
               <div class="progress-bar-wrap">
                 <p class="progress-bar-percent"></p>
               </div>
-              <form class="signUpForm" action="#" method="post">
+              <form class="eventCreateForm" action="#" method="post">
                 <div class="step1 select-location step">
-                  <h3 class="signUpTitle">1단계. 회원님의 관심 지역을 선택해주세요</h3>
-                  <p class="sub-title">선택하신 관심 지역을 기반으로 이벤트를 추천해드리고, 다른 회원님과 연결해드립니다.</p>
+                  <h3 class="eventCreateTitle">1단계. 이벤트를 진행할 지역을 지정해 주세요.</h3>
                   <img src="img/map-example.png" alt="지도" class="map-example">
                   <div class="input-location-wrap">
                     <img src="img/search-icon.png" alt="찾기" class="search-icon">
                     <input type="text" name="memberLocation" placeholder="주소 검색">
                   </div>
-                  <input class="locationResult" type="text" name="locationResult" value="서울시 동대문구" readonly>
+                  <input class="locationResult locationInput" type="text" name="locationResult" value="서울시 동대문구" readonly>
 
-                  <button type="button" class="go-main green-radius-btn" onclick="location.href='index.html'">메인으로</button>
+                  <label for="eventLocation">참가자들이 장소를 더 찾기 쉽게 명칭을 적어주세요.(선택사항)</label>
+                  <input type="test" name="eventLocation" class="locationInput" id="eventLocation" placeholder="모이는 장소 입력">
+                  
+                  <button type="button" class="go-main green-radius-btn" onclick="history.back();">이전으로</button>
                   <button type="button" class="go-step2 green-radius-btn">2단계로</button>
                 </div>
-                <div class="step2 select-interest step">
-                  <h3 class="signUpTitle">2단계. 회원님의 관심사를 선택해주세요</h3>
-                  <p class="sub-title">선택하신 관심사를 기반으로 이벤트를 추천해드리고, 관심사가 비슷한 회원님들과 더욱 편하게 만날 수 있습니다.</p>
-                  <div class="interest-wrap">
-                    <input type="checkbox" name="memberInterest" value="travel" id="travel"><label for="travel">여행</label>
-                    <input type="checkbox" name="memberInterest" value="exercise" id="exercise"><label for="exercise">운동</label>
-                    <input type="checkbox" name="memberInterest" value="book" id="book"><label for="book">독서</label>
-                    <input type="checkbox" name="memberInterest" value="business" id="business"><label for="business">비즈니스</label>
-                    <input type="checkbox" name="memberInterest" value="language" id="language"><label for="language">언어</label>
-                    <input type="checkbox" name="memberInterest" value="music" id="music"><label for="music">음악</label>
-                    <input type="checkbox" name="memberInterest" value="movie" id="movie"><label for="movie">영화/공연</label>
-                    <input type="checkbox" name="memberInterest" value="dance" id="dance"><label for="dance">댄스</label>
-                    <input type="checkbox" name="memberInterest" value="volunteer" id="volunteer"><label for="volunteer">봉사활동</label>
-                    <input type="checkbox" name="memberInterest" value="meeting" id="meeting"><label for="meeting">사교</label>
-                    <input type="checkbox" name="memberInterest" value="car" id="car"><label for="car">차/오토바이</label>
-                    <input type="checkbox" name="memberInterest" value="picture" id="picture"><label for="picture">사진/영상</label>
-                    <input type="checkbox" name="memberInterest" value="watchingSports" id="watchingSports"><label for="watchingSports">스포츠관람</label>
-                    <input type="checkbox" name="memberInterest" value="game" id="game"><label for="game">게임</label>
-                    <input type="checkbox" name="memberInterest" value="cook" id="cook"><label for="cook">요리</label>
-                    <input type="checkbox" name="memberInterest" value="pet" id="pet"><label for="pet">반려동물</label>
-                    <input type="checkbox" name="memberInterest" value="socialMovement" id="socialMovement"><label for="socialMovement">사회운동</label>
-                    <input type="checkbox" name="memberInterest" value="beauty" id="beauty"><label for="beauty">뷰티</label>
-                    <input type="checkbox" name="memberInterest" value="fashion" id="fashion"><label for="fashion">패션</label>
+                <div class="step2 select-category step">
+                  <h3 class="eventCreateTitle">2단계. 이벤트의 연관 카테고리를 선택해주세요.</h3>
+                  <p class="sub-title">
+                    회원님께서 주최하실 이벤트의 연관 카테고리를 선택해주세요. 더 활발한 모임이 되는데에 도움이 될거에요.<br>
+                    (카테고리는 한개만 선택 가능합니다.)
+                  </p>
+                  <div class="category-wrap">
+                    <input type="radio" name="memberInterest" value="travel" id="travel"><label for="travel">여행</label>
+                    <input type="radio" name="memberInterest" value="exercise" id="exercise"><label for="exercise">운동</label>
+                    <input type="radio" name="memberInterest" value="book" id="book"><label for="book">독서</label>
+                    <input type="radio" name="memberInterest" value="business" id="business"><label for="business">비즈니스</label>
+                    <input type="radio" name="memberInterest" value="language" id="language"><label for="language">언어</label>
+                    <input type="radio" name="memberInterest" value="music" id="music"><label for="music">음악</label>
+                    <input type="radio" name="memberInterest" value="movie" id="movie"><label for="movie">영화/공연</label>
+                    <input type="radio" name="memberInterest" value="dance" id="dance"><label for="dance">댄스</label>
+                    <input type="radio" name="memberInterest" value="volunteer" id="volunteer"><label for="volunteer">봉사활동</label>
+                    <input type="radio" name="memberInterest" value="meeting" id="meeting"><label for="meeting">사교</label>
+                    <input type="radio" name="memberInterest" value="car" id="car"><label for="car">차/오토바이</label>
+                    <input type="radio" name="memberInterest" value="picture" id="picture"><label for="picture">사진/영상</label>
+                    <input type="radio" name="memberInterest" value="watchingSports" id="watchingSports"><label for="watchingSports">스포츠관람</label>
+                    <input type="radio" name="memberInterest" value="game" id="game"><label for="game">게임</label>
+                    <input type="radio" name="memberInterest" value="cook" id="cook"><label for="cook">요리</label>
+                    <input type="radio" name="memberInterest" value="pet" id="pet"><label for="pet">반려동물</label>
+                    <input type="radio" name="memberInterest" value="socialMovement" id="socialMovement"><label for="socialMovement">사회운동</label>
+                    <input type="radio" name="memberInterest" value="beauty" id="beauty"><label for="beauty">뷰티</label>
+                    <input type="radio" name="memberInterest" value="fashion" id="fashion"><label for="fashion">패션</label>
+                    <input type="radio" name="memberInterest" value="etc" id="etc"><label for="etc">그 외 기타</label>
                   </div>
                   <button type="button" class="go-step1 green-radius-btn">1단계로</button>
                   <button type="button" class="go-step3 green-radius-btn">3단계로</button>
                 </div>
                 <div class="step3 input-info step">
-                    <h3 class="signUpTitle">3단계. 회원님의 정보를 입력해주세요.</h3>
-                    <p class="sub-title"><strong class='require'>필수</strong>표시는 필수적으로 입력하셔야 합니다.</p>
-                    <div class="insert-member-info">
-                      <label for="memberProfile"><strong class='require'>필수</strong>&nbsp;프로필 사진</label>
-                      <input type="file" class="uploadInput" name="memberProfile" onchange="loadImg(this)">
+                    <h3 class="eventCreateTitle">3단계. 이벤트의 상세 정보를 입력해주세요.</h3>
+                    <div class="insert-event-info">
+                      <label for="eventProfile">이벤트 썸네일 사진</label>
+                      <input type="file" class="uploadInput" name="eventProfile" onchange="loadImg(this)">
                       <div class="uploadImgWrap">
                         <img class="uploadImg">
                         <button type="button" class="uploadBtn">사진 업로드</button>
                       </div><br>
-                      <label for="memberId"><strong class='require'>필수</strong>&nbsp;아이디</label>
-                      <input type="text" name="memberId" id="memberId"><br>
-                      <label for="memberPwd"><strong class='require'>필수</strong>&nbsp;비밀번호</label>
-                      <input type="password" name="memberPwd" id="memberPwd"><br>
-                      <label for="memberPwd2"><strong class='require'>필수</strong>&nbsp;비밀번호 확인</label>
-                      <input type="password" name="memberPwd2" id="memberPwd2"><br>
-                      <label for="memberNickname"><strong class='require'>필수</strong>&nbsp;닉네임</label>
-                      <input type="text" name="memberNickname" id="memberNickname"><br>
-                      <p><strong class='require'>필수</strong>&nbsp;전화번호</p>
-                      <input type="number" class="memberPhone" name="memberPhone1" maxlength="3" oninput="maxLengthCheck(this)">-
-                      <input type="number" class="memberPhone" name="memberPhone2" maxlength="4" oninput="maxLengthCheck(this)">-
-                      <input type="number" class="memberPhone" name="memberPhone3" maxlength="4" oninput="maxLengthCheck(this)"><br>
-                      <label for="memberEmail"><strong class='require'>필수</strong>&nbsp;이메일</label>
-                      <input type="email" name="memberEmail" id="memberEmail"><br>
-                      <label for="memberBirth"><strong class='require'>필수</strong>&nbsp;생년월일</label>
-                      <input type="date" name="memberBirth" id="memberBirth"><br>
-                      <p><strong class='require'>필수</strong>&nbsp;성별</p>
-                      <label for="male" class="gender-label"><input type="radio" name="memberGender" value="male" id="male">남자</label>
-                      <label for="female" class="gender-label"><input type="radio" name="memberGender" value="female" id="female">여자</label><br>
-                      <p>본인 계좌번호</p>
-                      <select name="memberBankName">
-                        <option value="none">은행선택</option>
-                        <option value="sinhan">신한은행</option>
-                        <option value="kookmin">국민은행</option>
-                        <option value="woori">우리은행</option>
-                        <option value="hana">하나은행</option>
-                      </select>
-                      <input type="number" class="memberBankNumber" name="memberBankNumber" placeholder="계좌번호입력('-' 없이 입력해주세요.)"><br>
-                      <label for="memberIntroduce" class="memberIntroduceTitle">자기소개</label>
-                      <textarea name="memberIntroduce" id="memberIntroduce" rows="8" cols="80" placeholder="내용을 입력해주세요."></textarea><br>
+                      <label for="eventTitle">이벤트 제목</label>
+                      <input type="text" name="eventTitle" id="eventTitle"><br>
+                      <label for="eventIntroduce" class="eventIntroduceTitle">이벤트 소개내용</label>
+                      <textarea name="eventIntroduce" id="eventIntroduce" rows="8" cols="80" placeholder="내용을 입력해주세요."></textarea><br>
+                      <label for="startDate">이벤트 시작 시간</label>
+                      <input type="datetime-local" name="startDate" id="startDate"><br>
+                      <label for="endDate">이벤트 종료 시간</label>
+                      <input type="datetime-local" name="endDate" id="endDate"><br>
+                      <label for="ticket">참가 티켓 수</label>
+                      <input type="number" name="eventTicket" id="ticket"><br>
+                      <label for="boundary">이벤트 정원</label>
+                      <input type="number" name="boundary" id="boundary" min="2"><br>
+
+                      
                       <button type="button" class="go-step2 green-radius-btn mt-4">2단계로</button>
-                      <button type="button" class="go-step4 green-radius-btn mt-4">회원가입</button>
+                      <button type="button" class="go-step4 green-radius-btn mt-4">이벤트 생성</button>
                     </div>
                   </div>
                   <div class="step4 signUp-complete step">
-                    <h3 class="signUpTitle">회원가입 성공!</h3>
-                    <p class="sub-title">KKIRI의 회원이 되신 것을 환영합니다.</p>
+                    <h3 class="eventCreateTitle">이벤트 생성이 완료되었습니다!</h3>
+                    <p class="sub-title">이제 참가자들을 모아 이벤트를 함께 즐기세요.</p>
 
-                    <button type="button" class="green-radius-btn mt-4" onclick="location.href='index.html'">메인으로</button>
+                    <button type="button" class="green-radius-btn mt-4">이벤트 상세 페이지로</button>
                   </div>
               </form>
             </div>

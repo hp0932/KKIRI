@@ -105,3 +105,47 @@ input,select,textarea             {border:1px solid #cdd2d8; border-radius: 5px;
 #wrapper .custom-control-input{
   position: relative;
 }
+
+/* 페이지 타이틀 */
+.section-title{
+    font-size: 3rem;
+    margin-bottom: 50px;
+    display: inline-block;
+    border-bottom: 3px solid #333333;
+    padding-bottom: 10px;
+}
+
+/* 초록색 둥근 버튼 */
+html body .green-radius-btn{
+  background: #00a185;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  margin: 0 10px;
+}
+
+/* 필수('*') 표시 */
+.require	{
+  width:10px;
+  height:10px;
+  display:inline-block;
+  overflow:hidden;
+  text-indent:10px;
+  white-space:nowrap;
+  padding-bottom:5px;
+}
+.require:before{
+  content:"*";
+  color:#d02e21;
+  font-size:16px;
+  position:relative;
+  left:-9px;
+  bottom:5px;
+}
+/* number 태그 화살표 제거 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
