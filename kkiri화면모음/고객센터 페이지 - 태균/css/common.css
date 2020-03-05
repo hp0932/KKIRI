@@ -1,0 +1,25 @@
+/* 기본 설정 */
+@charset 'utf-8';
+
+*{margin:0;padding:0;vertical-align:top;border:0;}
+html,body{width:100%; min-height: 100%;}
+html{overflow-y:scroll; position: relative;}
+body{font-family: 'Noto Sans KR', sans-serif !important;color:#333333;background:#fff;}
+ul{list-style-type:none;}
+i,em,address{font-style:normal;}
+a{color:#333333;text-decoration:none;}
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus							{color:#333333; text-decoration:none;}
+input,img						{vertical-align:middle;}
+table							{border-collapse:collapse;}
+
+/* 부트스트랩 마진, 패딩 없애기 */
+.col-md-12{
+  padding: 0 !important;
+}
+.row{
+  margin : auto 0;
+}
